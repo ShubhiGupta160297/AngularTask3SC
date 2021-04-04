@@ -1,0 +1,23 @@
+<div class="container">
+    <h4 class="pt-3 text-primary">Registration Form</h4>
+    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label>Username</label>
+            <input type="text" class="form-control" formControlName="userName"
+             [class.is-invalid]="registrationForm.get('userName').invalid && registrationForm.get('userName').touched">
+             <small class="text-danger" [class.d-none]="registrationForm.get('userName').valid || registrationForm.get('userName').untouched">Username is required</small>
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" class="form-control" formControlName="password">
+        </div>
+        <div class="form-group">
+            <label>Confirm Password</label>
+            <input type="password" class="form-control" formControlName="confirmPassword"
+            [class.is-invalid]="registrationForm.errors?.misMatch">
+            <small class="text-danger" *ngIf="registrationForm.errors?.misMatch">Password do not match</small>
+        </div>
+        <a class="btn btn-primary mr-2" [routerLink]="['/login']">Login</a>
+        <button class="btn btn-success" type="submit" [disabled]="!registrationForm.valid">Register</button>
+    </form>
+</div>

@@ -1,0 +1,25 @@
+<div class="container">
+    <h4 class="pt-3 text-primary">Create User</h4>
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" class="form-control" formControlName="name"
+             [class.is-invalid]="userForm.get('name').invalid && userForm.get('name').touched">
+             <small class="text-danger" [class.d-none]="userForm.get('name').valid || userForm.get('name').untouched">Name is required</small>
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" class="form-control" formControlName="email"
+            [class.is-invalid]="userForm.get('email').invalid && userForm.get('email').touched">
+             <small class="text-danger" [class.d-none]="userForm.get('email').valid || userForm.get('email').untouched">Email is required</small>
+        </div>
+        <div class="form-group">
+            <label>Phone Number</label>
+            <input type="number" class="form-control" formControlName="phone"
+            [class.is-invalid]="userForm.get('phone').invalid && userForm.get('phone').touched">
+             <small class="text-danger" [class.d-none]="userForm.get('phone').valid || userForm.get('phone').untouched">Phone is required</small>
+        </div>
+        
+        <button class="btn btn-primary" type="submit" [disabled]="!userForm.valid">Create</button>
+    </form>
+</div>

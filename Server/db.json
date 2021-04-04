@@ -1,0 +1,54 @@
+{
+  "users": [
+    {
+      "userName": "Shubhi",
+      "password": "password",
+      "confirmPassword": "password",
+      "id": 1
+    },
+    {
+      "userName": "Vinika",
+      "password": "vini",
+      "confirmPassword": "vini",
+      "id": 2
+    },
+    {
+      "userName": "Ankur ",
+      "password": "ank",
+      "confirmPassword": "ank",
+      "id": 3
+    },
+    {
+      "userName": "shubhi",
+      "password": "as",
+      "confirmPassword": "as",
+      "id": 4
+    }
+  ],
+  "create": [
+    {
+      "name": "Ankur",
+      "email": "ankur04@gmail.com",
+      "phone": 9045722787,
+      "id": 1
+    },
+    {
+      "name": "Fahad",
+      "email": "fahad04@gmail.com",
+      "phone": 90457227873,
+      "id": 2
+    },
+    {
+      "name": "shubhi",
+      "email": "shubhi03@gmail.com",
+      "phone": 65365646,
+      "id": 3
+    },
+    {
+      "name": "Vini",
+      "email": "vn89@gmail.com",
+      "phone": 245,
+      "id": 4
+    }
+  ]
+}
